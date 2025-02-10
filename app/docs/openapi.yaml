@@ -1,0 +1,44 @@
+
+# OpenAPI definition for the API
+
+openapi: 3.0.2
+info:
+  title: Number Classification API
+  description: An API for classifying numbers
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+paths:
+  /api/classify-number/:
+    get:
+      summary: Classify a number
+      description: Classify a number and return its classification and fun fact
+      parameters:
+        - in: query
+          name: number
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Number classification and fun fact
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  number:
+                    type: integer
+                  classification:
+                    type: string
+                  fun_fact:
+                    type: string
+        400:
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string

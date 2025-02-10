@@ -1,0 +1,16 @@
+# Configuration settings for the API
+
+# Server settings
+server:
+  host: 0.0.0.0
+  port: 8000
+
+# Database settings
+database:
+  url: sqlite:///number_classification_api.db
+
+# API settings
+api:
+  title: Number Classification API
+  description: An API for classifying numbers
+  version: 1.0.0
