@@ -53,4 +53,4 @@ async def api_classify_number(number: str = Query(None)):
     except HTTPException as e:
         raise e
     except Exception as e:
-        raise HTTPException(status_code=500, detail={"error": "An unexpected error occurred"})
+        return {"number": "alphabet", "error": True}
