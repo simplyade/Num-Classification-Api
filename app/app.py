@@ -10,7 +10,7 @@ Endpoints:
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from classifier.number_classifier import classify_number
+from .classifier.number_classifier import classify_number
 from classifier.utils import get_fun_fact
 
 app = FastAPI()
